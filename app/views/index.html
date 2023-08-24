@@ -1,0 +1,35 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Prototype for Personal Independence Payment (PIP) – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">
+        Prototype for Personal Independence Payment (PIP)
+        <span class="govuk-caption-xl">{{releaseVersion}}</span>
+      </h1>{{releaseVersion | log }}        
+
+      <h2 class="govuk-heading-m">Sprint 1: May 2022</h2>
+
+      {% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
+
+      <div class="govuk-inset-text">
+        <h3 class="govuk-heading-s">Hypothesis (work in progress)
+        </h3>
+        <p>We've seen: Citizens struggle to give the right type or amount of evidence</p>
+        <p>We think this is because: DWP don't allow the citizen to choose how they provide evidence</p>
+        <p>So if we: Allow the citizen to choose how they supply their evidence</p>
+        <p>We'll see: The process will be less stressful for the citizen</p>      
+      </div>
+      
+      <a href="/sprint-1/select-activities">View sprint 1 prototype</a>
+       
+    </div>
+  </div>
+
+{% endblock %}

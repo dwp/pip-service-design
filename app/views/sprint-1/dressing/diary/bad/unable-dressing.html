@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Tell us about the difficulties you have with dressing and undressing and how you manage them – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form class="form" action="../../../select-activities" method="post">
+
+
+      {{ govukTextarea({
+        name: "bad-unable-dressing",
+        id: "bad-unable-dressing",
+        
+        value: data['bad-unable-dressing'],
+        label: {
+          text: "Tell us why you cannot dress or undress on a bad day",
+          isPageHeading: true,
+          classes: "govuk-label--l"
+        }
+      }) }}
+
+      {{ govukButton({
+        text: 'Save and continue'
+      }) }}
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
