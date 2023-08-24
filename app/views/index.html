@@ -2,7 +2,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Prototype for Personal Independence Payment (PIP) – GOV.UK Prototype Kit
+Prototype for Team Lark working on Personal Independence Payment (PIP) – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block content %}
@@ -10,24 +10,47 @@ Prototype for Personal Independence Payment (PIP) – GOV.UK Prototype Kit
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <h1 class="govuk-heading-l">
-        Prototype for Personal Independence Payment (PIP)
+        Prototype for Team Lark working on Personal Independence Payment (PIP)
         <span class="govuk-caption-xl">{{releaseVersion}}</span>
-      </h1>{{releaseVersion | log }}        
-
-      <h2 class="govuk-heading-m">Sprint 1: May 2022</h2>
-
-      {% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
-
-      <div class="govuk-inset-text">
-        <h3 class="govuk-heading-s">Hypothesis (work in progress)
-        </h3>
-        <p>We've seen: Citizens struggle to give the right type or amount of evidence</p>
-        <p>We think this is because: DWP don't allow the citizen to choose how they provide evidence</p>
-        <p>So if we: Allow the citizen to choose how they supply their evidence</p>
-        <p>We'll see: The process will be less stressful for the citizen</p>      
-      </div>
+      </h1>{{releaseVersion | log }}  
       
-      <a href="/sprint-1/select-activities">View sprint 1 prototype</a>
+      <h2 class="govuk-heading-m">September 2023: Redesign health information gather</h2>
+
+
+      <p>Team Lark work within the PIP Service Design team and are currently focusing on redesigning the health information gather (formerly known as the PIP2).</p>
+      
+      <h3 class="govuk-heading-s">Problem statement</h3>
+
+      <p>The way we gain knowledge on how a citizen’s condition affects them does not reliably enable good decision making. We routinely need to undertake follow-ups throughout the journey, and this lengthens and complicates successfully being able to assess the citizen’s capabilities and needs. The citizen's experience of the information gather is frequently lengthy, difficult to complete and traumatic.</p>
+      <h3 class="govuk-heading-s">Prototypes</h3>
+
+<p>The team are currently in discovery, prototypes will be added as they move into alpha activities.</p>
+      <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+      <h2 class="govuk-heading-m">May 2022: PIP2 Design Sprint</h2>
+
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            More information about the PIP2 Design Sprint
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          <h3 class="govuk-heading-s">Hypothesis (work in progress)
+          </h3>
+          <p>We've seen: Citizens struggle to give the right type or amount of evidence</p>
+          <p>We think this is because: DWP don't allow the citizen to choose how they provide evidence</p>
+          <p>So if we: Allow the citizen to choose how they supply their evidence</p>
+          <p>We'll see: The process will be less stressful for the citizen</p> 
+          <p><a href="/sprint-1/select-activities">View sprint 1 prototype</a></p>
+          <p><a href="https://dwpdigital.atlassian.net/wiki/spaces/HPDU/pages/132929323736/PIP+2+Related+Design+Sprint+May+2022">Design and research documented on Confluence</a></p>
+
+        </div>
+      </details>
+
+      
+      
+      
        
     </div>
   </div>
