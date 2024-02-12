@@ -1,0 +1,55 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Prototype for Team Lark working on Personal Independence Payment (PIP) – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">
+        Hypothesis 1
+      </h1>{{releaseVersion | log }}  
+      
+
+
+      <p>We've seen that citizens find the application journey complex, repetitive and don't understand what information to provide.
+      </p>
+
+      <p>We think this is because the questions are framed around conditions and daily living and mobility activities.
+      </p>
+
+      <div class="govuk-inset-text">
+      <p><strong>If:</strong> we ask questions around real life day-to-day activities</p>
+      <p><strong>Then:</strong> Claimants will be able to complete applications quicker, easier and with less distress</p>
+</div>
+
+
+
+<h2 class="govuk-heading-m">Daily activities questions - ITERATION 1 - Feb 2024</h2>
+<p>Group questions around support and aids with follow up questions about which 'real life day to day activities' are impacted / relevant.</p>
+
+<h3 class="govuk-heading-s">Version 1</h3>
+
+<p>all activities on one page, user selects from checkboxes</p>
+
+
+      <a  class="govuk-button" href="it1/v1-select-activities">Version 1</a>
+      
+      <h3 class="govuk-heading-s">Version 2</h3>
+
+<p>Activities separate and presented one by one</p>
+<a  class="govuk-button" href="it1/v2-start">Version 2</a>
+
+
+
+      
+      
+      
+       
+    </div>
+  </div>
+
+{% endblock %}

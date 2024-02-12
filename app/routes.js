@@ -329,5 +329,195 @@ router.post('/bad-problems-moving-around-router', function(req, res, next){
     }
   })
 
+  // hypothesis 1 v1 routes
+
+  //activity selector routing
+
+  // travelling 
+
+  router.get(/travelSelect/ , function (req, res) {
+    if (req.query.radioGroup === "yes") {
+        res.redirect('travel-support')
+    }
+    else {
+        res.redirect('travel-no')
+    }
+})
+
+router.post('/travel-how-router', function(req, res, next){
+
+  const travelCheck = req.session.data['travel-help']
+  
+    if (travelCheck == 'need-help') {
+      res.redirect('/h1/it1/travel-help')
+    } 
+    if (travelCheck == 'use-aids') {
+      res.redirect('/h1/it1/travel-aids')
+    } 
+    else {
+      res.redirect('/h1/it1/shopping')
+    } 
+  })
+
+
+  // shopping 
+
+  router.get(/shoppingSelect/ , function (req, res) {
+    if (req.query.radioGroup === "yes") {
+        res.redirect('shopping-support')
+    }
+    else {
+        res.redirect('shopping-no')
+    }
+})
+
+router.post('/shopping-how-router', function(req, res, next){
+
+  const shoppingCheck = req.session.data['shopping-help']
+  
+    if (shoppingCheck == 'need-help') {
+      res.redirect('/h1/it1/shopping-help')
+    } 
+    if (shoppingCheck == 'use-aids') {
+      res.redirect('/h1/it1/shopping-aids')
+    } 
+    else {
+      res.redirect('/h1/it1/housework')
+    } 
+  })
+
+  
+  // housework 
+
+  router.get(/houseworkSelect/ , function (req, res) {
+    if (req.query.radioGroup === "yes") {
+        res.redirect('housework-support')
+    }
+    else {
+        res.redirect('housework-no')
+    }
+})
+
+router.post('/housework-how-router', function(req, res, next){
+
+  const houseworkCheck = req.session.data['housework-help']
+  
+    if (houseworkCheck == 'need-help') {
+      res.redirect('/h1/it1/housework-help')
+    } 
+    if (houseworkCheck == 'use-aids') {
+      res.redirect('/h1/it1/housework-aids')
+    } 
+    else {
+      res.redirect('/h1/it1/medical-appts')
+    } 
+  })
+
+
+    // medical appointments 
+
+    router.get(/medicalApptsSelect/ , function (req, res) {
+      if (req.query.radioGroup === "yes") {
+          res.redirect('medical-support')
+      }
+      else {
+          res.redirect('medical-no')
+      }
+  })
+  
+  router.post('/medical-how-router', function(req, res, next){
+  
+    const medicalCheck = req.session.data['medical-help']
+    
+      if (medicalCheck == 'need-help') {
+        res.redirect('/h1/it1/medical-help')
+      } 
+      if (medicalCheck == 'use-aids') {
+        res.redirect('/h1/it1/medical-aids')
+      } 
+      else {
+        res.redirect('/h1/it1/work')
+      } 
+    })
+
+        // work 
+
+        router.get(/workSelect/ , function (req, res) {
+          if (req.query.radioGroup === "yes") {
+              res.redirect('work-support')
+          }
+          else {
+              res.redirect('work-no')
+          }
+      })
+      
+      router.post('/work-how-router', function(req, res, next){
+      
+        const workCheck = req.session.data['work-help']
+        
+          if (workCheck == 'need-help') {
+            res.redirect('/h1/it1/work-help')
+          } 
+          if (workCheck == 'use-aids') {
+            res.redirect('/h1/it1/work-aids')
+          } 
+          else {
+            res.redirect('/h1/it1/food')
+          } 
+        })
+
+    
+// preparing food 
+
+        router.get(/foodSelect/ , function (req, res) {
+          if (req.query.radioGroup === "yes") {
+              res.redirect('food-support')
+          }
+          else {
+              res.redirect('food-no')
+          }
+      })
+      
+      router.post('/food-how-router', function(req, res, next){
+      
+        const workCheck = req.session.data['food-help']
+        
+          if (workCheck == 'need-help') {
+            res.redirect('/h1/it1/food-help')
+          } 
+          if (workCheck == 'use-aids') {
+            res.redirect('/h1/it1/food-aids')
+          } 
+          else {
+            res.redirect('/h1/it1/budgeting')
+          } 
+        })
+
+// budgeting
+
+router.get(/budgetingSelect/ , function (req, res) {
+  if (req.query.radioGroup === "yes") {
+      res.redirect('budgeting-support')
+  }
+  else {
+      res.redirect('budgeting-no')
+  }
+})
+
+router.post('/budgeting-how-router', function(req, res, next){
+
+const budgetingCheck = req.session.data['budgeting-help']
+
+  if (budgetingCheck == 'need-help') {
+    res.redirect('/h1/it1/budgeting-help')
+  } 
+  if (budgetingCheck == 'use-aids') {
+    res.redirect('/h1/it1/budgeting-aids')
+  } 
+  else {
+    res.redirect('/h1/it1/cya')
+  } 
+})
+
 
 module.exports = router
