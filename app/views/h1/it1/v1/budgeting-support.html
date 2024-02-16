@@ -10,7 +10,7 @@ Which activities do your conditions or disabilities affect? – {{ serviceName }
 
 {% block content %}
 
-<form class="form" action="/travel-how-router" method="post">
+<form class="form" action="/budgeting-router" method="post">
 
 
   <div class="govuk-grid-row">
@@ -19,30 +19,29 @@ Which activities do your conditions or disabilities affect? – {{ serviceName }
           <fieldset class="govuk-fieldset" aria-describedby="daily-activity-hint">
               <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
                   <h1 class="govuk-fieldset__heading"><span class="govuk-caption-xl">Apply for Personal Independence Payment (PIP)</span>
-                    Do you get support when travelling?
+                    Do you get support to manage your money?
                   </h1>
               </legend>
               <div class="govuk-checkboxes" data-module="govuk-checkboxes">
                 <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="travel-help" name="travel-help" type="checkbox" value="need-help">
-                    <label class="govuk-label govuk-checkboxes__label" for="travel-help">
-                      Yes, someone helps me
+                    <input class="govuk-checkboxes__input" id="budgeting-help" name="budgeting-help" type="checkbox" value="need-help">
+                    <label class="govuk-label govuk-checkboxes__label" for="budgeting-help">
+                        Yes, someone helps me
                     </label>
                   </div>
                   <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="travel-help" name="travel-help" type="checkbox" value="use-aids">
-                    <label class="govuk-label govuk-checkboxes__label" for="travel-help">
+                    <input class="govuk-checkboxes__input" id="budgeting-help" name="budgeting-help" type="checkbox" value="use-aids">
+                    <label class="govuk-label govuk-checkboxes__label" for="budgeting-help">
                         Yes, I use something to help me
                     </label>
                     <div id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
-                      this could include a walking stick, or a vehicle with mobility adaptations
-                    </div>
-
+                        This might include an application or a budgeting tool.
+                      </div>
                   </div>
                   <div class="govuk-checkboxes__divider">or</div>
                   <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="travel-help" name="travel-help" type="checkbox" value="none" data-behaviour="none">
-                    <label class="govuk-label govuk-checkboxes__label" for="travel-help">
+                    <input class="govuk-checkboxes__input" id="budgeting-help" name="budgeting-help" type="checkbox" value="none" data-behaviour="none">
+                    <label class="govuk-label govuk-checkboxes__label" for="budgeting-help">
                         No, I do this without support
                     </label>
                   </div>              </div>              </fieldset>
