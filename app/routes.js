@@ -333,6 +333,171 @@ router.post('/bad-problems-moving-around-router', function(req, res, next){
 
   //activity selector routing
 
+  router.post('/daily-activity-select', function(req, res, next){
+
+    const dailyActivityCheck = req.session.data['daily-activity']
+    
+      if (dailyActivityCheck == 'work') {
+        res.redirect('/h1/it1/v1/work-support')
+      } 
+      if (dailyActivityCheck == 'travel') {
+        res.redirect('/h1/it1/v1/travel-support')
+      } 
+      if (dailyActivityCheck == 'shopping') {
+        res.redirect('/h1/it1/v1/shopping-support')
+      } 
+      if (dailyActivityCheck == 'housework') {
+        res.redirect('/h1/it1/v1/housework-support')
+      } 
+      if (dailyActivityCheck == 'medical-appointments') {
+        res.redirect('/h1/it1/v1/medical-support')
+      } 
+      if (dailyActivityCheck == 'prepare-meals') {
+        res.redirect('/h1/it1/v1/food-support')
+      } 
+      if (dailyActivityCheck == 'budgeting') {
+        res.redirect('/h1/it1/v1/budgeting-support')
+      } 
+      else {
+        res.redirect('/h1/it1/v1/none')
+      } 
+    })
+
+            // work 
+          
+            router.post('/work-router', function(req, res, next){
+          
+              const workCheck = req.session.data['work-help']
+              
+                if (workCheck == 'need-help') {
+                  res.redirect('/h1/it1/v1/work-help')
+                } 
+                if (workCheck == 'use-aids') {
+                  res.redirect('/h1/it1/v1/work-aids')
+                } 
+                else {
+                  res.redirect('/h1/it1/v1/food-support')
+                } 
+              })
+
+ // travel
+
+    router.post('/travel-router', function(req, res, next){
+
+      const travelCheck = req.session.data['travel-help']
+      
+        if (travelCheck == 'need-help') {
+          res.redirect('/h1/it1/v1/travel-help')
+        } 
+        if (travelCheck == 'use-aids') {
+          res.redirect('/h1/it1/v1/travel-aids')
+        } 
+        else {
+          res.redirect('/h1/it1/v1/shopping-support')
+        } 
+      })
+    
+    
+      // shopping 
+    
+    
+    router.post('/shopping-router', function(req, res, next){
+    
+      const shoppingCheck = req.session.data['shopping-help']
+      
+        if (shoppingCheck == 'need-help') {
+          res.redirect('/h1/it1/v1/shopping-help')
+        } 
+        if (shoppingCheck == 'use-aids') {
+          res.redirect('/h1/it1/v1/shopping-aids')
+        } 
+        else {
+          res.redirect('/h1/it1/v1/housework-support')
+        } 
+      })
+    
+      
+      // housework 
+    
+    
+    router.post('/housework-router', function(req, res, next){
+    
+      const houseworkCheck = req.session.data['housework-help']
+      
+        if (houseworkCheck == 'need-help') {
+          res.redirect('/h1/it1/v1/housework-help')
+        } 
+        if (houseworkCheck == 'use-aids') {
+          res.redirect('/h1/it1/v1/housework-aids')
+        } 
+        else {
+          res.redirect('/h1/it1/v1/medical-support')
+        } 
+      })
+    
+    
+        // medical appointments 
+    
+      
+      router.post('/medical-router', function(req, res, next){
+      
+        const medicalCheck = req.session.data['medical-help']
+        
+          if (medicalCheck == 'need-help') {
+            res.redirect('/h1/it1/v1/medical-help')
+          } 
+          if (medicalCheck == 'use-aids') {
+            res.redirect('/h1/it1/v1/medical-aids')
+          } 
+          else {
+            res.redirect('/h1/it1/v1/work-support')
+          } 
+        })
+    
+
+    
+        
+    // preparing food 
+    
+
+          
+          router.post('/food-router', function(req, res, next){
+          
+            const workCheck = req.session.data['food-help']
+            
+              if (workCheck == 'need-help') {
+                res.redirect('/h1/it1/v1/food-help')
+              } 
+              if (workCheck == 'use-aids') {
+                res.redirect('/h1/it1/v1/food-aids')
+              } 
+              else {
+                res.redirect('/h1/it1/v1/budgeting-support')
+              } 
+            })
+    
+    // budgeting
+    
+
+    
+    router.post('/budgeting-router', function(req, res, next){
+    
+    const budgetingCheck = req.session.data['budgeting-help']
+    
+      if (budgetingCheck == 'need-help') {
+        res.redirect('/h1/it1/budgeting-help')
+      } 
+      if (budgetingCheck == 'use-aids') {
+        res.redirect('/h1/it1/budgeting-aids')
+      } 
+      else {
+        res.redirect('/h1/it1/cya')
+      } 
+    })
+    
+
+  // v2 routes
+
   // travelling 
 
   router.get(/travelSelect/ , function (req, res) {

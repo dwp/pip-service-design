@@ -10,7 +10,7 @@ Which activities do your conditions or disabilities affect? – {{ serviceName }
 
 {% block content %}
 
-<form class="form" action="/selectActivities" method="post">
+<form class="form" action="/daily-activity-select" method="post">
 
 
   <div class="govuk-grid-row">
@@ -26,50 +26,51 @@ Which activities do your conditions or disabilities affect? – {{ serviceName }
                   Select all that apply.
               </div>
               <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+
                   <div class="govuk-checkboxes__item">
-                      <input class="govuk-checkboxes__input" id="daily-activity" name="checkboxGroup" type="checkbox"
-                          value="work">
-                      <label class="govuk-label govuk-checkboxes__label" for="daily-activity">
-                          Go to work
-                      </label>
-                  </div>
-                  <div class="govuk-checkboxes__item">
-                      <input class="govuk-checkboxes__input" id="daily-activity-2" name="checkboxGroup" type="checkbox"
+                      <input class="govuk-checkboxes__input" id="daily-activity-2" name="daily-activity" type="checkbox"
                           value="travel">
                       <label class="govuk-label govuk-checkboxes__label" for="daily-activity-2">
                           Travel from place to place
                       </label>
                   </div>
                   <div class="govuk-checkboxes__item">
-                      <input class="govuk-checkboxes__input" id="daily-activity-3" name="checkboxGroup" type="checkbox"
+                      <input class="govuk-checkboxes__input" id="daily-activity-3" name="daily-activity" type="checkbox"
                           value="shopping">
                       <label class="govuk-label govuk-checkboxes__label" for="daily-activity-3">
                           Shop for essential items
                       </label>
                   </div>
                   <div class="govuk-checkboxes__item">
-                      <input class="govuk-checkboxes__input" id="daily-activity-4" name="checkboxGroup" type="checkbox"
+                      <input class="govuk-checkboxes__input" id="daily-activity-4" name="daily-activity" type="checkbox"
                           value="housework">
                       <label class="govuk-label govuk-checkboxes__label" for="daily-activity-4">
                           Housework
                       </label>
                   </div>
                   <div class="govuk-checkboxes__item">
-                      <input class="govuk-checkboxes__input" id="daily-activity-5" name="checkboxGroup" type="checkbox"
+                      <input class="govuk-checkboxes__input" id="daily-activity-5" name="daily-activity" type="checkbox"
                           value="medical-appointments">
                       <label class="govuk-label govuk-checkboxes__label" for="daily-activity-5">
                           Go to medical appointments
                       </label>
                   </div>
                   <div class="govuk-checkboxes__item">
-                      <input class="govuk-checkboxes__input" id="daily-activity-6" name="checkboxGroup" type="checkbox"
+                    <input class="govuk-checkboxes__input" id="daily-activity" name="daily-activity" type="checkbox"
+                        value="work">
+                    <label class="govuk-label govuk-checkboxes__label" for="daily-activity">
+                        Go to work
+                    </label>
+                </div>
+                  <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="daily-activity-6" name="daily-activity" type="checkbox"
                           value="prepare-meals">
                       <label class="govuk-label govuk-checkboxes__label" for="daily-activity-6">
                           Preparing meals
                       </label>
                   </div>
                   <div class="govuk-checkboxes__item">
-                      <input class="govuk-checkboxes__input" id="daily-activity-7" name="checkboxGroup" type="checkbox"
+                      <input class="govuk-checkboxes__input" id="daily-activity-7" name="daily-activity" type="checkbox"
                           value="budgeting">
                       <label class="govuk-label govuk-checkboxes__label" for="daily-activity-7">
                           Budgeting
@@ -77,7 +78,7 @@ Which activities do your conditions or disabilities affect? – {{ serviceName }
                   </div>
                   <div class="govuk-checkboxes__divider">or</div>
                   <div class="govuk-checkboxes__item">
-                      <input class="govuk-checkboxes__input" id="daily-activity-8" name="checkboxGroup" type="checkbox"
+                      <input class="govuk-checkboxes__input" id="daily-activity-8" name="daily-activity" type="checkbox"
                           value="none">
                       <label class="govuk-label govuk-checkboxes__label" for="daily-activity-8">
                           None of these
