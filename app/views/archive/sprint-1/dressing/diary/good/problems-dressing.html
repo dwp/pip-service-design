@@ -1,0 +1,92 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Which activities do your conditions or disabilities affect? – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<form class="form" action="/good-problems-dressing-router" method="post">
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="problems-dressing-hint">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                  <h1 class="govuk-fieldset__heading">
+                    Do any of the following apply when dressing and undressing on a good day?
+                  </h1>
+              </legend>
+              <div id="problems-dressing-hint" class="govuk-hint">
+                  Select all that apply.
+              </div>
+              <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="problems-moving-around" name="problems-moving-around" type="checkbox"
+                        value="good-pain">
+                    <label class="govuk-label govuk-checkboxes__label" for="problems-moving-around">
+                      I get pain or discomfort                      
+                    </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="problems-moving-around" name="problems-moving-around" type="checkbox"
+                      value="good-tired">
+                  <label class="govuk-label govuk-checkboxes__label" for="problems-moving-around">
+                    I get tired and need to take breaks                      
+                  </label>
+              </div>
+                  <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="problems-dressing-2" name="problems-dressing" type="checkbox"
+                          value="good-hurt">
+                      <label class="govuk-label govuk-checkboxes__label" for="problems-dressing-2">
+                        I might injure or hurt myself
+                      </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="problems-dressing-3" name="problems-dressing" type="checkbox"
+                        value="good-supervision">
+                    <label class="govuk-label govuk-checkboxes__label" for="problems-dressing-3">
+                      I need someone to supervise me
+                    </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="problems-dressing-3" name="problems-dressing" type="checkbox"
+                      value="good-help">
+                  <label class="govuk-label govuk-checkboxes__label" for="problems-dressing-3">                    
+                    I need someone to help me
+                  </label>
+              </div>
+                  <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="problems-dressing-4" name="problems-dressing" type="checkbox"
+                          value="good-reminder">
+                      <label class="govuk-label govuk-checkboxes__label" for="problems-dressing-4">
+                        I need someone to prompt, remind or encourage me
+                      </label>
+                  </div>
+                  <div class="govuk-checkboxes__divider">or</div>
+
+                  <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="problems-dressing-5" name="problems-dressing" type="checkbox"
+                          value="good-unable">
+                      <label class="govuk-label govuk-checkboxes__label" for="problems-dressing-5">
+                          I was unable to dress or undress
+                      </label>
+                  </div>
+              </div>
+              </fieldset>
+              </div>
+
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

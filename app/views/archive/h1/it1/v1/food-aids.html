@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Which activities do your conditions or disabilities affect? – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<form class="form" action="budgeting-support" method="get">
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="daily-activity-hint">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                  <h1 class="govuk-fieldset__heading"><span class="govuk-caption-xl">Apply for Personal Independence Payment (PIP)</span>
+                    What things do you use to help you when prepare and cook your own meals? 
+                  </h1>
+              </legend>
+              <div id="more-detail-hint" class="govuk-hint">
+                This might include:
+
+                <ul class="govuk-list--bullet">
+                  <li>adapted utensils
+                  </li>
+                  <li>a perching stool
+                  </li>
+                  <li>pre-chopped vegetables
+                  </li>
+                </ul>
+                Tell us how they help you.
+
+              </div>
+              <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5" aria-describedby="more-detail-hint"></textarea>            </fieldset>
+              </div>
+
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
