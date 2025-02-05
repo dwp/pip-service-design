@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Who is the best person to check this with? – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form class="form" action="how-contact" method="post">
+
+        <h1 class="govuk-heading-l">You wrote:</h1>
+
+          <div class="govuk-inset-text">
+            <p>“About twice a year, for about 3 weeks at a time I have difficulty remembering to turn the hob off because I get too distracted to complete tasks like this. My partner supervises me in the kitchen to make sure I stay safe.”</p>
+            <p>“Every day, I have difficulty standing while preparing food because my leg is too stiff and painful. I need to use a perching stool so I can rest my leg while preparing food."</p>
+          </div>
+
+          {% from "govuk/components/input/macro.njk" import govukInput %}
+
+          {{ govukInput({
+            label: {
+              text: "Who is the best person to check this with?"
+            },
+            id: "person-to-check-food",
+            name: "person-to-check-food"
+          }) }}
+       
+
+      {{ govukButton({
+        text: 'Save and continue'
+      }) }}
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

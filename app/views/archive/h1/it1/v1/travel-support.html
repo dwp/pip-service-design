@@ -1,0 +1,59 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Which activities do your conditions or disabilities affect? – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<form class="form" action="/travel-router" method="post">
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="daily-activity-hint">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                  <h1 class="govuk-fieldset__heading"><span class="govuk-caption-xl">Apply for Personal Independence Payment (PIP)</span>
+                    Do you get support when travelling?
+                  </h1>
+              </legend>
+              <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="travel-help" name="travel-help" type="checkbox" value="need-help">
+                    <label class="govuk-label govuk-checkboxes__label" for="travel-help">
+                      Yes, someone helps me
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="travel-help" name="travel-help" type="checkbox" value="use-aids">
+                    <label class="govuk-label govuk-checkboxes__label" for="travel-help">
+                        Yes, I use something to help me
+                    </label>
+                    <div id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
+                      this could include grab rails or a perching stool
+                    </div>
+
+                  </div>
+                  <div class="govuk-checkboxes__divider">or</div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="travel-help" name="travel-help" type="checkbox" value="none" data-behaviour="none">
+                    <label class="govuk-label govuk-checkboxes__label" for="travel-help">
+                        No, I do this without support
+                    </label>
+                  </div>              </div>              </fieldset>
+              </div>
+
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

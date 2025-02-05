@@ -1,0 +1,126 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Which activities do your conditions or disabilities affect? – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<form class="form" action="../select-activities" method="post">
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="ask-nhs-hint">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                  <h1 class="govuk-fieldset__heading">
+                      What information can we ask a health or care professional for?
+                  </h1>
+              </legend>
+
+              <p class="govuk-body">We will only ask a health or care professional for information on:</p>
+              <ul class="govuk-list govuk-list--bullet">
+                {% if (data['daily-activity'] == "prep-food") %}
+                <li>preparing food</li>
+                {% endif %}
+                {% if (data['daily-activity'] == "dressing") %}
+                <li>dressing and undressing</li>
+                {% endif %}
+                {% if (data['daily-activity'] == "moving-around") %}
+                <li>moving around</li>
+                {% endif %}
+                </ul>
+
+              <div id="ask-nhs-hint" class="govuk-hint">
+                  Select all that apply.
+              </div>
+              <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                  <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="ask-nhs" name="ask-nhs" type="checkbox"
+                          value="current-condition">
+                      <label class="govuk-label govuk-checkboxes__label" for="ask-nhs">
+                          Current condition
+                      </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="ask-nhs-2" name="ask-nhs" type="checkbox"
+                          value="past-condition">
+                      <label class="govuk-label govuk-checkboxes__label" for="ask-nhs-2">
+                          Significant past conditions
+                      </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="ask-nhs-3" name="ask-nhs" type="checkbox"
+                          value="cant-work">
+                      <label class="govuk-label govuk-checkboxes__label" for="ask-nhs-3">
+                          The time period you cannot work
+                      </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="ask-nhs-4" name="ask-nhs" type="checkbox"
+                          value="medication">
+                      <label class="govuk-label govuk-checkboxes__label" for="ask-nhs-4">
+                          Medication relating to your conditions
+                      </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="ask-nhs-5" name="ask-nhs" type="checkbox"
+                          value="treatment">
+                      <label class="govuk-label govuk-checkboxes__label" for="ask-nhs-5">
+                          Treatment you've received
+                      </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="ask-nhs-6" name="ask-nhs" type="checkbox"
+                          value="risk">
+                      <label class="govuk-label govuk-checkboxes__label" for="ask-nhs-6">
+                         Risk of harm to yourself or others
+                      </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="ask-nhs-7" name="ask-nhs" type="checkbox"
+                          value="carer">
+                      <label class="govuk-label govuk-checkboxes__label" for="ask-nhs-7">
+                         If you have a carer
+                      </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="ask-nhs-8" name="ask-nhs" type="checkbox"
+                          value="home-visits">
+                      <label class="govuk-label govuk-checkboxes__label" for="ask-nhs-8">
+                          If you have had any home visits
+                      </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="ask-nhs-9" name="ask-nhs" type="checkbox"
+                          value="appointments">
+                      <label class="govuk-label govuk-checkboxes__label" for="ask-nhs-9">
+                         How often you have appointments
+                      </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="ask-nhs-11" name="ask-nhs" type="checkbox"
+                          value="none-nhs">
+                      <label class="govuk-label govuk-checkboxes__label" for="ask-nhs-11">
+                          None of these
+                      </label>
+                  </div>
+
+              </div>
+              </fieldset>
+              </div>
+
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

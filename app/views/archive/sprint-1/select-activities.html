@@ -1,0 +1,133 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Which activities do your conditions or disabilities affect? – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<form class="form" action="/select-activities-router" method="post">
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="daily-activity-hint">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                  <h1 class="govuk-fieldset__heading">
+                      Which activities do your conditions or disabilities affect?
+                  </h1>
+              </legend>
+              <div id="daily-activity-hint" class="govuk-hint">
+                  Select all that apply.
+              </div>
+              <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                  <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="daily-activity" name="daily-activity" type="checkbox"
+                          value="prep-food">
+                      <label class="govuk-label govuk-checkboxes__label" for="daily-activity">
+                          Preparing food
+                      </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="daily-activity-2" name="daily-activity" type="checkbox"
+                          value="eat-drink">
+                      <label class="govuk-label govuk-checkboxes__label" for="daily-activity-2">
+                          Eating and drinking
+                      </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="daily-activity-3" name="daily-activity" type="checkbox"
+                          value="treatments">
+                      <label class="govuk-label govuk-checkboxes__label" for="daily-activity-3">
+                          Managing treatments
+                      </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="daily-activity-4" name="daily-activity" type="checkbox"
+                          value="washing">
+                      <label class="govuk-label govuk-checkboxes__label" for="daily-activity-4">
+                          Washing and bathing
+                      </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="daily-activity-5" name="daily-activity" type="checkbox"
+                          value="toilet">
+                      <label class="govuk-label govuk-checkboxes__label" for="daily-activity-5">
+                          Using the toilet and managing incontinence
+                      </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="daily-activity-6" name="daily-activity" type="checkbox"
+                          value="dressing">
+                      <label class="govuk-label govuk-checkboxes__label" for="daily-activity-6">
+                          Dressing and undressing
+                      </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="daily-activity-7" name="daily-activity" type="checkbox"
+                          value="talking">
+                      <label class="govuk-label govuk-checkboxes__label" for="daily-activity-7">
+                          Talking, listening and understanding
+                      </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="daily-activity-8" name="daily-activity" type="checkbox"
+                          value="reading">
+                      <label class="govuk-label govuk-checkboxes__label" for="daily-activity-8">
+                          Reading
+                      </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="daily-activity-9" name="daily-activity" type="checkbox"
+                          value="mixing">
+                      <label class="govuk-label govuk-checkboxes__label" for="daily-activity-9">
+                          Mixing with other people
+                      </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="daily-activity-10" name="daily-activity" type="checkbox"
+                          value="money">
+                      <label class="govuk-label govuk-checkboxes__label" for="daily-activity-10">
+                          Managing money
+                      </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="daily-activity" name="daily-activity" type="checkbox"
+                          value="planning-journey">
+                      <label class="govuk-label govuk-checkboxes__label" for="daily-activity">
+                          Planning and following a journey
+                      </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="daily-activity-2" name="daily-activity" type="checkbox"
+                          value="moving-around">
+                      <label class="govuk-label govuk-checkboxes__label" for="daily-activity-2">
+                          Moving around
+                      </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="daily-activity-11" name="daily-activity" type="checkbox"
+                          value="none">
+                      <label class="govuk-label govuk-checkboxes__label" for="daily-activity-11">
+                          None of these
+                      </label>
+                  </div>
+
+              </div>
+              </fieldset>
+              </div>
+
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
