@@ -80,6 +80,10 @@ router.post('/pip-register/signposting-eligibility/security-check', function(req
     }
     })
 
+    router.post('/pip-register/signposting-eligibility/failed-security', function(request, response) {
+        response.redirect('/pip-register/welcome-screen')
+    })
+
 
 
 //---------------------------------------------------------------------------------------------
